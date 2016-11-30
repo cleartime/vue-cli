@@ -4,11 +4,12 @@
       v-if="$route.path !== '/time-entries/log-time'"
       to="/time-entries/log-time"
       class="btn btn-primary">
-      创建
+      创建13
     </router-link>
 
-    <div v-if="$route.path === '/time-entries/log-time'">
+    <div v-if="$route.path === '/time-entries/log-time'" class="abc">
       <h3>创建</h3>
+      <p>56789jko</p>
     </div>
 
     <hr>
@@ -78,7 +79,7 @@
         }
     }
 </script>
-<style>
+<style type="text/css">
 .avatar {
     height: 75px;
     margin: 0 auto;
@@ -94,6 +95,7 @@
     padding: 10px;
   }
   .comment-section {
+
     padding: 20px;
   }
 </style>
