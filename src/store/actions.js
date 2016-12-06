@@ -14,3 +14,5 @@ export default {
     commit(types.DELETE_PLAN, plan)
   }
 };
+
+
