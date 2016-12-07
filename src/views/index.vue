@@ -1,62 +1,9 @@
 <template>
     <div  id="main" style='height:calc(100vh - 100px)'>
       <ul>
-        <li>1sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>sda3few</li>
-        <li>sdafew</li>
-        <li>sdafew</li>
-        <li>11sdaf3ew</li>
+        <li v-for="i in list">
+            {{ i }}
+        </li>
       </ul>
     </div>
 </template>
@@ -76,6 +23,11 @@
 <script>
 import IScroll from '../lib/iscroll.min.js';
     export default{
+      data(){
+        return {
+          list:[12,12,123,123,124,213,21321,3213,213,213,123,213,21,321,3,123,12,3,213,21,123,121,212,1231,321321,321312]
+        }
+      },
       mounted() {
         let _this = this;
         const myScroll = new IScroll('#main',{
@@ -90,10 +42,10 @@ import IScroll from '../lib/iscroll.min.js';
       methods:{
         dropDownRefresh(self){
            if(self.y == self.maxScrollY){
-              alert('拉到低了')
+              console.log('拉到低了')
            }
            if(!self.y){
-              alert('拉到头了')
+              console.log('拉到头了')
            }
         }
       }
