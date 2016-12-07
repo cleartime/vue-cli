@@ -5,21 +5,24 @@ export default {
       path: '/',
       component: require('./views/index'),
       meta:{
-        name:'首页'
+        name:'首页',
+        isshowBackbtn:true,
       }
     },
     {
       path: '/index',
       component: require('./views/index'),
       meta:{
-        name:'首页'
+        name:'首页',
+        isshowBackbtn:true,
       }
     },
     {
       path: '/me',
       component: require('./views/me'),
       meta:{
-        name:'我的'
+        name:'我的',
+        isshowBackbtn:true,
       }
     },
     {

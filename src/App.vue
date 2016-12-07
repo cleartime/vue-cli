@@ -4,7 +4,7 @@
       <div class="main">
           <router-view></router-view>
       </div>
-      <c-nav class='nav'></c-nav>
+      <c-nav class='nav' v-if='$route.meta.isshowBackbtn'></c-nav>
   </div>
 </template>
 

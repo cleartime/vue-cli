@@ -74,14 +74,28 @@
   }
 </style>
 <script>
-import IScroll from '../assets/iscroll.min.js';
+import IScroll from '../lib/iscroll.min.js';
     export default{
       mounted() {
-        new IScroll('#main',{
+        let _this = this;
+        const myScroll = new IScroll('#main',{
           scrollbars: true,
           fadeScrollbars:true
         });
+        myScroll.on('scrollEnd', function(){
+            let self = this;
+            _this.dropDownRefresh(self);
+        })
       },
-
+      methods:{
+        dropDownRefresh(self){
+           if(self.y == self.maxScrollY){
+              alert('拉到低了')
+           }
+           if(!self.y){
+              alert('拉到头了')
+           }
+        }
+      }
     }
 </script>

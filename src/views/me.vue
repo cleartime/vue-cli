@@ -23,7 +23,7 @@
             }
         },
         mounted() {
-            this.$store.dispatch('GET_ARTICLE');
+            this.$store.dispatch('getlist');
         },
     }
 </script>

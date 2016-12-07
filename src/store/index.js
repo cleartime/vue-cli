@@ -4,8 +4,12 @@ import mutations from './mutations'
 import actions from './actions'
 import getters from './getters'
 import state from './store'
-import user from './modules/user'
-import article from './modules/article'
+import module from './modules/'
+
+
+//模块设置别名
+const article = module.article;
+const user = module.user;
 
 Vue.use(Vuex);
 
@@ -15,8 +19,8 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    user,
     article,
+    user,
   }
 })
 

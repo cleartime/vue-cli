@@ -2,15 +2,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from './store'
 import App from './App'
-import VueResource from 'vue-resource'
 import * as filters from './filters'
 import routers from './routers';
 
+//注册过滤器
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
 
-Object.keys(filters).forEach(k => Vue.filter(k, filters[k])) //注册过滤器
-
+//引入路由
 Vue.use(VueRouter)
-Vue.use(VueResource)
 
 const router = new VueRouter(routers);
 
