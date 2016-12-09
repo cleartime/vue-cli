@@ -17,7 +17,7 @@
 </style>
 <script>
     export default{
-        computed : {
+        computed: {
             list() {
                 return this.$store.state.article
             }
