@@ -28,8 +28,8 @@
     .head{
       z-index: 10;
       position: fixed;
-      line-height: 50px;
-      background: #00b3ee;
+      line-height: 44px;
+      background: #454545;
       text-align: center;
       left: 0;
       right: 0;
@@ -38,13 +38,16 @@
     .main{
       /* main绝对定位，进行内部滚动 */
       position: absolute;
-      top: 50px;
+      top: 44px;
       bottom: 50px;
       /* 使之可以滚动 */
       overflow-y: scroll;
       width: 100%;
     }
     .nav{
+      background: #FBFBFB;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
       z-index: 10;
       position: fixed;
       left: 0;

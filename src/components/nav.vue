@@ -1,7 +1,7 @@
 <template>
     <div>
       <ul>
-        <li><router-link to="/index">主页</router-link></li>
+        <li><router-link to="/index">首页</router-link></li>
         <li><router-link to="/me">我的</router-link></li>
       </ul>
     </div>
@@ -10,13 +10,17 @@
     ul{
       padding-left: 0;
       li{
-        background: #5bc0de;
         width: 50%;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
         list-style: none;
         float: left;
         &:first-child:before{
         content: "|";
           float: right;
+        }
+        a{
+          color: #FF5C00;
         }
       }
     }

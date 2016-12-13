@@ -7,6 +7,10 @@
     </div>
 </template>
 <style  lang="scss" scoped>
+    span{
+      color: #fff;
+      font-size: 17px;
+    }
     .back{
       color: #fff;
       float: left;

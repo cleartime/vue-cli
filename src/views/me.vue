@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div v-touch = 'aaa' >ghjklwejiweiojo</div>
     <ul>
       <li v-for="i in list.articleList">
         <router-link :to="{ path: 'detail'}">
@@ -17,13 +18,18 @@
 </style>
 <script>
     export default{
+        data(){
+          return {
+            aaa:212,
+          }
+        },
         computed: {
             list() {
                 return this.$store.state.article
-            }
+            },
         },
         mounted() {
-            this.$store.dispatch('getlist');
+            //this.$store.dispatch('getlist');
         },
     }
 </script>
